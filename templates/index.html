@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+
+{% block navbar %}
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3" style="font-size: 25px">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Petti.Dev</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+{% endblock %}
+
+{% block body %}
+
+
+<!--GitHub Featurettes-->
+<div class="border border-dark rounded mt-5 mx-5 bg-dark">
+    <div class="card bg-secondary text-center fw-bold">
+        <div class="card-header">
+            <h3>GitHub</h1>
+        </div>
+        <div class="card-body">
+        <h5 class="card-title">Petti.Dev GitHub</h5>
+        <p class="card-text">Please check out my github page to see all of my projects.</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub logo" class="mb-3" style="width: 60px; height: 60px;">
+        <br>
+        <a href="https://github.com/HerbAvenue" target="_blank" class="btn btn-primary">Check it out!</a>
+        </div>
+    </div>
+</div>
+
+<!--Current Live Projects Cards-->
+<div class="border border-dark rounded  mx-5 mb-5 mt-3 p-3 bg-dark">    
+    <h1 class="border rounded-pill border-light p-2 d-flex justify-content-center text-white fw-bold">Current Live Projects</h1>
+    <br>
+    <div class="row">
+        <div class="col-sm mb-3 mb-sm-0">
+            <div class="card bg-secondary fw-bold">
+                <div class="card-body">
+                <h5 class="card-title fw-bold text-center">License Expiry Tracker</h5>
+                <p class="card-text">License Expiry Manager is a user-friendly web application designed to help you stay on top of your licenses, credit cards, and memberships. The application allows you to track all your expiry dates in one place, ensuring you can see all your upcoming renewals.</p>
+                <img src="{{ url_for('static', filename='images/LicenseExpiryTracker.png') }}" class="img-fluid">
+                <br><br>
+                <a href="https://license.petti.dev/" target="_blank" class="btn btn-primary d-flex justify-content-center">See it live!</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="card bg-secondary fw-bold">
+                <div class="card-body">
+                <h5 class="card-title fw-bold text-center">Right Turn Direction Optimizer</h5>
+                <p class="card-text">(WIP) A direction finder that optimizes all your stops to mostly make right turns. This avoids red lights.</p>
+                <img src="{{ url_for('static', filename='images/RightTurnDirections.png') }}" class="img-fluid">
+                <br><br>
+                <a href="https://maps.petti.dev/" target="_blank" class="btn btn-primary d-flex justify-content-center">WIP (See anyways)</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block footer %}
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3" style="font-size: 25px"">
+    <div class="container-fluid d-flex justify-content-center">
+      <a class="navbar-brand" href="#">Petti.Dev {{ year }}</a>
+    </div>
+</nav>
+{% endblock %}
